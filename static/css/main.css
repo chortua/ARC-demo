@@ -1,0 +1,336 @@
+body{
+background-color : white;
+height: 2000px
+}
+.top{
+    position:relative;
+    width:100%;
+    height: 200px;
+}
+.logo{
+    position:absolute;
+    width:100%;
+    height: 200px;
+    left: 18%;
+}
+.nav_bar{
+    position:relative;
+    width:100%;
+    height:50px;
+    background-color:#0078d0;
+}
+.nav_text{
+    position:absolute;
+    width:50px;
+    length:10%;
+}
+.nipper{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid yellow;
+    top:300px;
+    left:2.5%;
+}
+.mpx{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid red;
+    top:540px;
+    left:2.5%;
+
+}
+.oh{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid orange;
+    top:800px;
+    left:2.5%;
+
+}
+.fh{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid black;
+    top:1050px;
+    left:2.5%;
+}
+.robofork{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid #396EB0;
+    top:1300px;
+    left:2.5%
+
+
+}
+#main{ left:5%; color:white; padding:10px; }
+#nipper{ left:15%; color:white; padding:10px;}
+#demo{ left:25%; color:white; padding:10px;}
+container{
+margin-right: auto;
+text-align: right;
+
+width: 600px;
+height: 100px;
+padding-top: 100px;
+}
+
+input[type=submit] {
+  margin: 30px;
+  align:center;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input[type=submit]:hover{
+  background-color:orange;
+}
+
+input[type=submit]:focus{
+  background-color:red;
+}
+
+
+h3 {
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  color : #0078d0;
+}
+
+
+
+.main_parking{
+height: 100px;
+width: 70px;
+background: #b4d6db;
+display: inline-block;
+position:relative;
+text-align: center;
+top:100px;
+left:100px;
+}
+.drop1{
+height: 100px;
+width: 70px;
+background: #b4d6db;
+display: inline-block;
+position:relative;
+text-align: center;
+top: 100px;
+left: 300px;
+
+}
+.drop2{
+height: 100px;
+width: 70px;
+background: #b4d6db;
+display: inline-block;
+position:relative;
+text-align: center;
+top: 100px;
+left: 375px;
+}
+.drop3{
+height: 100px;
+width: 70px;
+background: #b4d6db;
+display: inline-block;
+position:relative;
+text-align: center;
+top: 100px;
+left:450px;
+}
+.bottom{
+position: absolute;
+top:10px;
+left: 450px;
+}
+.battery{
+    position:absolute;
+    top:400px;
+    width:10px;
+    height:30px;
+    background-color:green;
+}
+.b_full{position:absolute; right:23%;top:11px;}
+.b_seventyfive{ position:absolute; right:23%;top:11px;}
+.b_fifty{position:absolute; right:23%;top:11px;}
+.b_forty{position:absolute; right:23%;top:11px;}
+.b_recharge{position:absolute; right:23%;top:11px;}
+.b_offline{position:absolute; right:23%;top:11px;}
+.battery_body{
+    position:absolute;
+    top:50px;
+    left:200px;
+    width:50px;
+    height:80px;
+    background-color:green;
+    border-radius: 3px;
+    outline:5px solid black;
+}
+/* Battery charging icon */
+.square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform:skew(-20deg);
+  left:15px;
+  top:10px;
+  background-color: yellow;
+  position: absolute;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#triangle-topleft {
+      position:absolute;
+      width: 0;
+      height: 0;
+      top:30px;
+      left:18px;
+      transform:skew(-20deg);
+      border-top: 20px solid yellow;
+      border-right: 20px solid transparent;
+}
+
+.battery_plus{
+  position:absolute;
+  top:40px;
+  left:215px;
+  width:20px;
+  height:10px;
+  background-color:black;
+}
+
+
+.seventyfive{
+  position:absolute;
+  top:50px;
+  left:200px;
+  width:50px;
+  height:20px;
+  background-color:white;
+}
+.fifty{
+  position:absolute;
+  top:50px;
+  left:200px;
+  width:50px;
+  height:40px;
+  background-color:white;
+}
+.forty{
+  position:absolute;
+  top:100px;
+  left:200px;
+  width:50px;
+  height:30px;
+  background-color:#EFAF13;
+  border-radius: 0px 0px 3px 3px;
+}
+.recharge{
+  position:absolute;
+  top:115px;
+  left:200px;
+  width:50px;
+  height:15px;
+  background-color:#e81309;
+  border-radius: 0px 0px 3px 3px;
+}
+.offline{
+  position:absolute;
+  top:90px;
+  left:200px;
+  width:50px;
+  height:40px;
+  background-color:grey;
+  border-radius: 0px 0px 3px 3px;
+ }
+background-text{
+        font-size:180px;
+        font-weight:900;
+        color:#f1f1f1;
+        vertical-align: middle;
+        line-height: 200px;
+        margin-left:550px;
+        z-index:-1;
+ }
+.A1{
+    position:absolute;
+    width:200px;
+    height: 100px;
+    top:00px;
+    padding:0px;
+    margin-left:38px;
+}
+.A2{
+    position:absolute;
+    width:200px;
+    height: 100px;
+    top:80px;
+    padding:0px;
+    margin-left:50px;
+}
+.B1{
+    position:absolute;
+    width:200px;
+    height: 100px;
+    top:0px;
+    left:230px;
+}
+.B2{
+    position:absolute;
+    width:200px;
+    height: 100px;
+    top:80px;
+    left:230px;
+
+}
+.C1{
+position:absolute;
+    width:200px;
+    height: 100px;
+    top:0px;
+    left:450px
+
+}
+.C2{
+    position:absolute;
+    width:200px;
+    height: 100px;
+    top:100px;
+    left:450px;
+}

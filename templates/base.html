@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ARC Demo</title>
+    <meta http-equiv="refresh" content="3" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta name="viewport content="width="device-width, initial-scale=1.0">
+
+</head>
+<body >
+    <div class="top">
+        <div class="logo">
+            <img src="{{url_for('static', filename='altech.jpg')}}" align="middle" width="600" height="200"/>
+        </div>
+    </div>
+    <div class="nav_bar">
+      <ul class="navbar-nav ">
+          <h3><a class="nav_text"  id="main" aria-current="page"  href="{{ url_for('index') }}">Main</a></h3>
+          <h3><a class="nav_text" id="nipper" aria-current="page" href="{{ url_for('nipper') }}">Nipper</a></h3>
+          <h3><a class="nav_text" id="demo" aria-current="page" href="{{ url_for('demo') }}">MPX</a></h3>
+      </ul>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

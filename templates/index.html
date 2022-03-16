@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!-- #####################   Nipper   #####################-->
+<div class="nipper">
+    <background-text> Nipper </background-text>
+    <div class="A1">
+        <form align="middle" method="post" action="/">
+            <input align="right" type="submit" value="Pick up Cart" name="nipperA1"  />
+        </form>
+    </div>
+    <div class="A2">
+        <form method="post" action="/">
+        <input type="submit" value="抜き取る" name="nipperA2"/>
+        </form>
+    </div>
+    <div class="B1">
+          <form method="post" action="/">
+        <input type="submit" value="充電する" name="nipperB1"/>
+        </form>
+    </div>
+    <div class="B2">
+        <form method="post" action="/">
+        <input type="submit" value="挿入する" name="nipperB2"/>
+        </form>
+    </div>
+    <div class="C1"></div>
+    <div class="C2"></div>
+    <!-- Check the battery levels  -->
+    {% if nipperstate == 1 or nipperstate == 2 %}
+
+          {% if state == 'criticallyCharging' or state == 'charging' %}
+        <div class="b_full">
+          <div class="battery_body"><h4 style="color:yellow; position:absolute; top:40px; left:12px;">{{b_level}}%</h4>
+          <div class="square">
+             <div class="content"></div>
+          </div>
+        <div id="triangle-topleft">
+             <div class="content"></div>
+        </div>
+        </div>
+            <div class="battery_plus"></div>
+        </div>
+          {% elif b_level > 85 %}
+        <div class="b_full">
+          <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:12px;">{{b_level}}%</h4></div>
+          <div class="battery_plus"></div>
+        </div>
+        {% elif b_level > 65 and b_level < 86 %}
+        <div class="b_seventyfive">
+          <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{b_level}}%</h4></div>
+          <div class="battery_plus"></div>
+          <div class="seventyfive"></div>
+        </div>
+        {% elif b_level > 55 and b_level < 66 %}
+        <div class="b_fifty">
+          <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{b_level}}%</h4></div>
+          <div class="battery_plus"></div>
+          <div class="fifty"></div>
+        </div>
+        {% elif b_level > 35 and b_level < 56 %}
+        <div class="b_forty">
+          <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{b_level}}%</h4></div>
+          <div class="battery_plus"></div>
+          <div class="forty"></div>
+        </div>
+        {% elif b_level < 36 %}
+        <div class="b_recharge">
+          <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{b_level}}%</h4></div>
+          <div class="battery_plus"></div>
+          <div class="recharge"></div>
+        </div>
+        {% endif %}
+    {% else %}
+        <div class="b_offline">
+          <div class="battery_body" style="outline: 5px solid grey; background-color: white;"></div>
+          <div class="battery_plus" style="background-color:grey;"></div>
+          <div class="offline"></div>
+        </div>
+
+    {% endif %}
+</div>
+<!-- ####################   MPX   ###########################-->
+<div class="mpx">
+    <background-text>MPX</background-text>
+      {% if bm_level > 85 %}
+    <div class="b_full">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bm_level}}%</h4></div>
+      <div class="battery_plus"></div>
+    </div>
+    {% elif bm_level > 65 and bm_level < 86 %}
+    <div class="b_seventyfive">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bm_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="seventyfive"></div>
+    </div>
+    {% elif bm_level > 55 and bm_level < 66 %}
+    <div class="b_fifty">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bm_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="fifty"></div>
+    </div>
+    {% elif bm_level > 35 and bm_level < 56 %}
+    <div class="b_forty">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bm_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="forty"></div>
+    </div>
+    {% elif bm_level < 36 %}
+    <div class="b_recharge">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bm_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="recharge"></div>
+    </div>
+    {% else %}
+    <div class="b_offline">
+      <div class="battery_body" style="outline: 5px solid grey; background-color: white;"></div>
+      <div class="battery_plus" style="background-color:grey;"></div>
+      <div class="offline"></div>
+    </div>
+    {% endif %}
+</div>
+<!-- #####################   Otto 100   #####################-->
+<div class="oh">
+    <background-text> Otto 100 </background-text>
+      {% if bo_level > 85 %}
+    <div class="b_full">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bo_level}}%</h4></div>
+      <div class="battery_plus"></div>
+    </div>
+    {% elif bo_level > 65 and bo_level < 86 %}
+    <div class="b_seventyfive">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bo_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="seventyfive"></div>
+    </div>
+    {% elif bo_level > 55 and bo_level < 66 %}
+    <div class="b_fifty">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bo_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="fifty"></div>
+    </div>
+    {% elif bo_level > 35 and bo_level < 56 %}
+    <div class="b_forty">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bo_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="forty"></div>
+    </div>
+    {% elif bo_level < 36 %}
+    <div class="b_recharge">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bo_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="recharge"></div>
+    </div>
+    {% else %}
+    <div class="b_offline">
+      <div class="battery_body" style="outline: 5px solid grey; background-color: white;"></div>
+      <div class="battery_plus" style="background-color:grey;"></div>
+      <div class="offline"></div>
+    </div>
+    {% endif %}
+</div>
+<!-- #####################   Otto 1500   #####################-->
+<div class="fh">
+    <background-text>Otto 1500</background-text>
+      {% if bf_level > 85 %}
+    <div class="b_full">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+    </div>
+    {% elif bf_level > 65 and bf_level < 86 %}
+    <div class="b_seventyfive">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="seventyfive"></div>
+    </div>
+    {% elif bf_level > 55 and bf_level < 66 %}
+    <div class="b_fifty">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="fifty"></div>
+    </div>
+    {% elif bf_level > 35 and bf_level < 56 %}
+    <div class="b_forty">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="forty"></div>
+    </div>
+    {% elif bf_level < 36 %}
+    <div class="b_recharge">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{bf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="recharge"></div>
+    </div>
+    {% else %}
+    <div class="b_offline">
+      <div class="battery_body" style="outline: 5px solid grey; background-color: white;"></div>
+      <div class="battery_plus" style="background-color:grey;"></div>
+      <div class="offline"></div>
+    </div>
+    {% endif %}
+</div>
+<!-- #####################   Robofork   #####################-->
+<div class="robofork">
+    <background-text> Robofork </background-text>
+      {% if brf_level > 85 %}
+    <div class="b_full">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{brf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+    </div>
+    {% elif brf_level > 65 and brf_level < 86 %}
+    <div class="b_seventyfive">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{brf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="seventyfive"></div>
+    </div>
+    {% elif brf_level > 55 and brf_level < 66 %}
+    <div class="b_fifty">
+      <div class="battery_body"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{brf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="fifty"></div>
+    </div>
+    {% elif brf_level > 35 and brf_level < 56 %}
+    <div class="b_forty">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:16px;">{{brf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="forty"></div>
+    </div>
+    {% elif brf_level < 36 %}
+    <div class="b_recharge">
+      <div class="battery_body" style="background-color:white;"><h4 style="color:white; position:absolute; top:40px; left:12px;">{{brf_level}}%</h4></div>
+      <div class="battery_plus"></div>
+      <div class="recharge"></div>
+    </div>
+    {% else %}
+    <div class="b_offline">
+      <div class="battery_body" style="outline: 5px solid grey; background-color: white;"></div>
+      <div class="battery_plus" style="background-color:grey;"></div>
+      <div class="offline"></div>
+    </div>
+    {% endif %}
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
