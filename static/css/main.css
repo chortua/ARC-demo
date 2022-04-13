@@ -43,7 +43,16 @@ height: 2000px
     outline:5px solid red;
     top:540px;
     left:2.5%;
-
+}
+.pallets{
+    background:white;
+    position:absolute;
+    width: 95%;
+    height :200px;
+    border-radius: 150px;
+    outline:5px solid white;
+    top:540px;
+    left:2.5%;
 }
 .oh{
     background:white;
@@ -135,7 +144,7 @@ height: 100px;
 width: 70px;
 background: #b4d6db;
 display: inline-block;
-position:relative;
+position: relative;
 text-align: center;
 top:100px;
 left:100px;
@@ -154,7 +163,7 @@ left: 300px;
 .drop2{
 height: 100px;
 width: 70px;
-background: #b4d6db;
+background: #b4d6db; 
 display: inline-block;
 position:relative;
 text-align: center;
